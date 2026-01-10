@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: "Mulish", sans-serif;
 }
-
-/*Header*/
 
 .header {
     margin: 20px;
@@ -16,12 +20,27 @@ body {
     border-radius: 16px;
 }
 
-/*Content*/
-
 .main-content {
-    display: flex;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
     gap: 20px;
     margin: 20px;
+}
+
+.left-column,
+.middle-column,
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 0;
+}
+
+.left-column>div {
+    background-color: #FADCD9;
+    border-radius: 16px;
+    padding: 20px;
+    flex: 1;
 }
 
 .intro {
@@ -35,12 +54,7 @@ body {
 
 .intro img {
     width: 20%;
-    display: flex;
     align-self: flex-end;
-}
-
-.intro {
-    align-self: flex-start;
 }
 
 .about {
@@ -53,32 +67,15 @@ body {
 
 .about img {
     width: 10%;
-    display: flex;
     align-self: flex-end;
 }
 
-.about .text {
-    align-self: flex-start;
-}
-
-.left-column {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    flex: 2;
-}
-
-.left-column>div {
-    background-color: #FADCD9;
+.middle-column img {
+    width: 100%;
+    max-width: 450px;
     border-radius: 16px;
-    padding: 20px;
-}
-
-.middle-column {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    gap: 20px;
+    height: auto;
+    object-fit: cover;
 }
 
 .contact-me {
@@ -89,56 +86,42 @@ body {
     flex-direction: column;
     justify-content: space-between;
     gap: 60px;
+    flex: 1;
 }
 
 .contact-me h2 {
     font-size: 48px;
 }
 
-.middle-column img {
-    width: 100%;
-    max-width: 450px;
-    border-radius: 16px;
-}
-
-.right-column {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    flex: 1;
-}
-
-.service,
-.social {
+.right-column>div,
+.right-column>nav {
     background-color: #FADCD9;
     border-radius: 16px;
     padding: 20px;
+    flex: 1;
 }
 
 .service {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 30px;
+    gap: 80px;
 }
 
 .service h2 {
     border-bottom: 2px #F8AFA6 solid;
-    padding-bottom: 12px
+    padding-bottom: 12px;
 }
 
 .social {
     font-size: 18px;
     display: flex;
     justify-content: center;
-    height: 100px;
     align-items: center;
     gap: 50px;
 }
 
 .social a {
-    display: inline-block;
-    margin-right: 10px;
     text-decoration: none;
     color: black;
     font-weight: bold;
