@@ -126,3 +126,27 @@ body {
     color: black;
     font-weight: bold;
 }
+
+@media(max-width:1024px) {
+    .main-content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .left-column {
+        grid-column: span 2;
+    }
+}
+
+@media(max-width:768px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+
+    .left-column {
+        grid-column: span 1;
+    }
+
+    .middle-column img {
+        align-self: center;
+    }
+}
