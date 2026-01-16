@@ -7,11 +7,19 @@
     <title>Tarotttex - Таролог Вікторія</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="./src/assets/tarott.svg" />
+    <script src="srcipt.js" defer></script>
 </head>
 
 <body>
     <header class="header">
         <h1 class="logo-text">Tarotttex</h1>
+        <nav>
+            <ul class="nav-list">
+                <a href="cardsInf.h">
+                    <li class="nav-item">Значення карт</li>
+                </a>
+            </ul>
+        </nav>
     </header>
 
     <div class="main-content">
@@ -32,17 +40,19 @@
             <img src="./src/assets/myphoto.jpg" />
             <div class="contact-me">
                 Маєш запитання?
-                <h2>Contact me</h2>
+                <a href="https://t.me/tarotttex">
+                    <h2>Contact me</h2>
+                </a>
             </div>
         </div>
 
         <div class="right-column">
             <div class="service">
                 <h1>Типи розкладів:</h1>
-                <h2>Розклад на кохання</h2>
-                <h2>Розклад на фінанси</h2>
-                <h2>Розклад на здоров'я</h2>
-                <h2>Індивідуальне запитання</h2>
+                <h2 id="love">Розклад на кохання</h2>
+                <h2 id="finance">Розклад на фінанси</h2>
+                <h2 id="health">Розклад на здоров'я</h2>
+                <h2 id="individual">Індивідуальне запитання</h2>
             </div>
             <div class="social">
                 <a href="https://t.me/tarotttex">Записатись на консультацію</a>
@@ -50,6 +60,17 @@
         </div>
     </div>
 
+    <div class="modal-overlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 class="modal-title"></h3>
+                <button class="modal-close">&times</button>
+            </div>
+            <p class="modal-text">
+
+            </p>
+        </div>
+    </div>
 </body>
 
 </html>
