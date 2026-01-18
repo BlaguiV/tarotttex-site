@@ -35,4 +35,3 @@ scheduleItems.forEach(item => {
 
 closeBtn.addEventListener("click", () => overlay.classList.remove('active'))
 
-
